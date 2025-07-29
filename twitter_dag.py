@@ -19,7 +19,8 @@ default_args = {
 dag = DAG(
     'twitter_dag',
     default_args=default_args,
-    description='My first etl code'
+    description='My first etl code',
+    schedule='@daily'
 )
 
 run_etl = PythonOperator(
